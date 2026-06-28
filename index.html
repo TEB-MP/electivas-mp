@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elegir Electivas TEB</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Crect fill='%23667eea' width='200' height='200'/%3E%3Cpath fill='%23fff' d='M50 60c0-5 5-10 10-10h80c5 0 10 5 10 10v70c0 5-5 10-10 10H60c-5 0-10-5-10-10V60z'/%3E%3Cpath fill='%23667eea' d='M70 75h40v5H70zm0 15h40v5H70zm0 15h30v5H70z'/%3E%3Cpath fill='%23ff7e5f' d='M130 85l5-8 2 10-7 2z M135 105l6-6 1 9-8 1z'/%3E%3C/svg%3E">
     <style>
         * {
             margin: 0;
@@ -32,6 +33,15 @@
             color: white;
             padding: 40px 20px;
             text-align: center;
+        }
+
+        .header-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 15px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            padding: 8px;
         }
 
         .header h1 {
@@ -402,9 +412,9 @@
             background: #f0f0f0;
             border: 2px solid #ddd;
             color: #333;
-            padding: 12px 15px;
+            padding: 10px 12px;
             border-radius: 6px;
-            font-size: 0.95em;
+            font-size: 0.9em;
             font-weight: 500;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -446,6 +456,16 @@
             color: #667eea;
             font-weight: bold;
             margin-right: 8px;
+        }
+
+        .recommendation-description {
+            color: #333;
+            font-size: 0.95em;
+            margin: 10px 0;
+            padding: 10px;
+            background: rgba(102, 126, 234, 0.05);
+            border-radius: 6px;
+            border-left: 3px solid #667eea;
         }
 
         .infinity-pass {
@@ -528,8 +548,16 @@
 <body>
     <div class="container">
         <div class="header">
+            <div class="header-icon">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' style="width: 100%; height: 100%;">
+                    <rect fill='%23667eea' width='200' height='200'/>
+                    <path fill='%23fff' d='M50 60c0-5 5-10 10-10h80c5 0 10 5 10 10v70c0 5-5 10-10 10H60c-5 0-10-5-10-10V60z'/>
+                    <path fill='%23667eea' d='M70 75h40v5H70zm0 15h40v5H70zm0 15h30v5H70z'/>
+                    <path fill='%23ff7e5f' d='M130 85l5-8 2 10-7 2z M135 105l6-6 1 9-8 1z'/>
+                </svg>
+            </div>
             <h1>Guía de Electivas TEB MP</h1>
-            <p>Encuentra los cursos perfectos según tu perfil de músico</p>
+            <p>Según tu perfil musical</p>
         </div>
 
         <div class="content">
@@ -550,7 +578,6 @@
 
             <!-- Recomendador por perfil -->
             <div id="recommender" class="section active">
-                <h2>Encuentra tu perfil de músico</h2>
                 <div class="profile-buttons">
                     <button class="profile-btn" onclick="toggleSub(this, 'no-pensar')">
                         No quiero pensar, elige las electivas por mí
@@ -571,25 +598,25 @@
                         <span class="toggle-arrow">▼</span>
                     </button>
                     <div id="solo-instrumento" class="sub-buttons">
-                        <button class="sub-btn" onclick="showRec('rec-instrument-1')">Opción 1</button>
-                        <button class="sub-btn" onclick="showRec('rec-instrument-2')">Opción 2</button>
-                        <button class="sub-btn" onclick="showRec('rec-instrument-3')">Opción 3</button>
+                        <button class="sub-btn" onclick="showRec('rec-instrument-1')">Opción 1 (enfoque con música de India)</button>
+                        <button class="sub-btn" onclick="showRec('rec-instrument-2')">Opción 2 (enfoque con música Rock/Pop)</button>
+                        <button class="sub-btn" onclick="showRec('rec-instrument-3')">Opción 3 (enfoque con una clase más con Panagiotis Andreou)</button>
                         <div id="rec-instrument-1" class="recommendation" style="display:none;">
-                            <h4>Opción 1:</h4>
+                            <h4>Opción 1 (enfoque con música de India)</h4>
                             <ul class="recommendation-items">
                                 <li>Songwriting I</li>
                                 <li>Voicing Ragas</li>
                             </ul>
                         </div>
                         <div id="rec-instrument-2" class="recommendation" style="display:none;">
-                            <h4>Opción 2:</h4>
+                            <h4>Opción 2 (enfoque con música Rock/Pop)</h4>
                             <ul class="recommendation-items">
                                 <li>Songwriting I</li>
                                 <li>Singing with Musicians</li>
                             </ul>
                         </div>
                         <div id="rec-instrument-3" class="recommendation" style="display:none;">
-                            <h4>Opción 3:</h4>
+                            <h4>Opción 3 (enfoque con una clase más con Panagiotis Andreou)</h4>
                             <ul class="recommendation-items">
                                 <li>Songwriting I</li>
                                 <li>How to sing Middle Eastern Scales</li>
