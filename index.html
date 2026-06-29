@@ -458,16 +458,6 @@
             margin-right: 8px;
         }
 
-        .recommendation-description {
-            color: #333;
-            font-size: 0.95em;
-            margin: 10px 0;
-            padding: 10px;
-            background: rgba(102, 126, 234, 0.05);
-            border-radius: 6px;
-            border-left: 3px solid #667eea;
-        }
-
         .infinity-pass {
             background: linear-gradient(135deg, #ffa500 0%, #ff6b6b 100%);
             color: white;
@@ -549,12 +539,7 @@
     <div class="container">
         <div class="header">
             <div class="header-icon">
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' style="width: 100%; height: 100%;">
-                    <rect fill='%23667eea' width='200' height='200'/>
-                    <path fill='%23fff' d='M50 60c0-5 5-10 10-10h80c5 0 10 5 10 10v70c0 5-5 10-10 10H60c-5 0-10-5-10-10V60z'/>
-                    <path fill='%23667eea' d='M70 75h40v5H70zm0 15h40v5H70zm0 15h30v5H70z'/>
-                    <path fill='%23ff7e5f' d='M130 85l5-8 2 10-7 2z M135 105l6-6 1 9-8 1z'/>
-                </svg>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABTAAAAMWCAYAAADGSKlzAAABN2lDQ1BBZG9iZSBSR0IgKDE5OTgpAAAokZWPv0rDUBSHvxtFxaFWCOLgcCdRUGzVwYxJW4ogWKtDkq1JQ5ViEm6uf/oQjm4dXNx9AidHwUHxCXwDxamDQ4QMBYvf9J3fORzOAaNi152GUYbzWKt205Gu58vZF2aYAoBOmKV2q3UAECdxxBjf7wiA10277jTG+38yH6ZKAyNguxtlIYgK0L/SqQYxBMygn2oQD4CpTto1EE9AqZf7G1AKcv8ASsr1fBBfgNlzPR+MOcAMcl8BTB1da4Bakg7UWe9Uy6plWdLuJkEkjweZjs4zuR+HiUoT1dFRF8jvA2AxH2w3HblWtay99X/+PRHX82Vun0cIQCw9F1lBeKEuf1UYO5PrYsdwGQ7vYXpUZLs3cLcBC7dFtlqF8hY8Dn8AwMZP/fNTP8gAAAAJcEhZcwAALiMAAC4jAXilP3YAAAiHaVRYdFhNTDpjb20uYWRvYmUueG1wAAAAAAA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjYtYzE0NSA3OS4xNjM0OTksIDIwMTgvMDgvMTMtMTY6NDA6MjIgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6cGRmPSJodHRwOi8vbnMuYWRvYmUuY29tL3BkZi8xLjMvIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdEV2dD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlRXZlbnQjIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bXA6Q3JlYXRlRGF0ZT0iMjAyMy0wMS0xN1QxOToxMjozMS0wMzowMCIgeG1wOkNyZWF0b3JUb29sPSJDb3JlbERSQVcgMjAyMSIgeG1wOk1vZGlmeURhdGU9IjIwMjMtMDEtMjNUMTc6NTA6MTItMDY6MDAiIHhtcDpNZXRhZGF0YURhdGU9IjIwMjMtMDEtMjNUMTc6NTA6MTItMDY6MDAiIHBkZjpQcm9kdWNlcj0iQ29yZWwgUERGIEVuZ2luZSBWZXJzaW9uIDIzLjEuMC4zODkiIGRjOmZvcm1hdD0iaW1hZ2UvcG5nIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjRiZmU4NjRlLWY1OGMtMGQ0Yi1hZGI3LTEwYmVhNzMzNTY1YyIgeG1wTU06RG9jdW1lbnRJRD0iYWRvYmU6ZG9jaWQ6cGhvdG9zaG9wOjJlN2RmOTI4LWQ5ZGMtNGY0MC1iYzc0LWNjYWViZDA1MTZmYiIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjllYWE1YWU2LTQzYTYtNGY0Mi1iMTdhLTg5NTAwMTA1MzA4YyIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyIgcGhvdG9zaG9wOklDQ1Byb2ZpbGU9IkFkb2JlIFJHQiAoMTk5OCkiPiA8ZGM6Y3JlYXRvcj4gPHJkZjpTZXE+IDxyZGY6bGk+dXN1YXJpbzwvcmRmOmxpPiA8L3JkZjpTZXE+IDwvZGM6Y3JlYXRvcj4gPGRjOnRpdGxlPiA8cmRmOkFsdD4gPHJkZjpsaSB4bWw6bGFuZz0ieC1kZWZhdWx0Ij5URUIgbG9nbyBob29kaWU8L3JkZjpsaT4gPC9yZGY6QWx0PiA8L2RjOnRpdGxlPiA8eG1wTU06SGlzdG9yeT4gPHJkZjpTZXE+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJzYXZlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDo5ZWFhNWFlNi00M2E2LTRmNDItYjE3YS04OTUwMDEwNTMwOGMiIHN0RXZ0OndoZW49IjIwMjMtMDEtMjNUMTc6NTA6MTItMDY6MDAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE5IChXaW5kb3dzKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0iZGVyaXZlZCIgc3RFdnQ6cGFyYW1ldGVycz0iY29udmVydGVkIGZyb20gYXBwbGljYXRpb24vdm5kLmFkb2JlLnBob3Rvc2hvcCB0byBpbWFnZS9wbmciLz4gPHJkZjpsaSBzdEV2dDphY3Rpb249InNhdmVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOjRiZmU4NjRlLWY1OGMtMGQ0Yi1hZGI3LTEwYmVhNzMzNTY1YyIgc3RFdnQ6d2hlbj0iMjAyMy0wMS0yM1QxNzo1MDoxMi0wNjowMCIgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiBzdEV2dDpjaGFuZ2VkPSIvIi8+IDwvcmRmOlNlcT4gPC94bXBNTTpIaXN0b3J5PiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5ZWFhNWFlNi00M2E2LTRmNDItYjE3YS04OTUwMDEwNTMwOGMiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6OWVhYTVhZTYtNDNhNi00ZjQyLWIxN2EtODk1MDAxMDUzMDhjIiBzdFJlZjpvcmlnaW5hbERvY3VtZW50SUQ9InhtcC5kaWQ6OWVhYTVhZTYtNDNhNi00ZjQyLWIxN2EtODk1MDAxMDUzMDhjIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+EhuKcwAASXpJREFUeJzt3Xe4ZWdZPv77SYOQCgRBQAhNkI5IVRBQ6QJKEUOVXiwoERB/KEWqBQSMCEoTRAggKs0gEAy9dwFBugRBugRBugRBugRDkI/+/oS+M5PZs3fuVa41w3zf13Vda2d4593MmVmz17ve9109PDwsAAAAAAAArblH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" style="width: 100%; height: 100%; object-fit: contain;" alt="TEB Logo"/>
             </div>
             <h1>Guía de Electivas TEB MP</h1>
             <p>Según tu perfil musical</p>
@@ -580,7 +565,7 @@
             <div id="recommender" class="section active">
                 <div class="profile-buttons">
                     <button class="profile-btn" onclick="toggleSub(this, 'no-pensar')">
-                        🎲 No quiero pensar, elige las electivas por mí
+                        No quiero pensar, elige las electivas por mí
                         <span class="toggle-arrow">▼</span>
                     </button>
                     <div id="no-pensar" class="sub-buttons">
@@ -594,7 +579,7 @@
                     </div>
 
                     <button class="profile-btn" onclick="toggleSub(this, 'solo-instrumento')">
-                        🎸 Soy músico instrumentista (no me interesa cantar)
+                        Soy músico instrumentista (no me interesa cantar)
                         <span class="toggle-arrow">▼</span>
                     </button>
                     <div id="solo-instrumento" class="sub-buttons">
@@ -625,7 +610,7 @@
                     </div>
 
                     <button class="profile-btn" onclick="toggleSub(this, 'no-cantar-si-componer')">
-                        ✍️ No me interesa cantar pero sí componer
+                        No me interesa cantar pero sí componer
                         <span class="toggle-arrow">▼</span>
                     </button>
                     <div id="no-cantar-si-componer" class="sub-buttons">
@@ -639,7 +624,7 @@
                     </div>
 
                     <button class="profile-btn" onclick="toggleSub(this, 'tecnica-vocal')">
-                        🗣️ Me interesa muchísimo la técnica vocal
+                        Me interesa muchísimo la técnica vocal
                         <span class="toggle-arrow">▼</span>
                     </button>
                     <div id="tecnica-vocal" class="sub-buttons">
@@ -650,13 +635,13 @@
                                 <li>Estill Voice II</li>
                             </ul>
                             <div class="infinity-pass">
-                                <strong>💎 Sugerencia:</strong> Adquiere el Infinity Pass por USD 150 para tener acceso ilimitado a todas las electivas y profundizar más en el canto
+                                <strong>💎 Sugerencia:</strong> Adquiere el TEB Extension Pass por USD 150 para tener acceso a 8 electivas y profundizar más en el canto
                             </div>
                         </div>
                     </div>
 
                     <button class="profile-btn" onclick="toggleSub(this, 'estilos')">
-                        🚀 Quiero cantar diferentes estilos
+                        Quiero cantar diferentes estilos
                         <span class="toggle-arrow">▼</span>
                     </button>
                     <div id="estilos" class="sub-buttons">
@@ -671,7 +656,7 @@
                             </ul>
                             <p style="margin-top: 10px; color: #333; font-size: 0.95em;">Opción 2: How to sing R&B y How to sing Hip Hop</p>
                             <div class="infinity-pass">
-                                <strong>💎 Sugerencia:</strong> Adquiere el Infinity Pass por USD 150 para tener acceso ilimitado a todas las electivas y profundizar más en el canto
+                                <strong>💎 Sugerencia:</strong> Adquiere el TEB Extension Pass por USD 150 para tener acceso a 8 electivas y profundizar más en el canto
                             </div>
                         </div>
                         <div id="rec-styles-2" class="recommendation" style="display:none;">
@@ -681,7 +666,7 @@
                                 <li>Improv with scales for singers</li>
                             </ul>
                             <div class="infinity-pass">
-                                <strong>💎 Sugerencia:</strong> Adquiere el Infinity Pass por USD 150 para tener acceso ilimitado a todas las electivas y profundizar más en el canto
+                                <strong>💎 Sugerencia:</strong> Adquiere el TEB Extension Pass por USD 150 para tener acceso a 8 electivas y profundizar más en el canto
                             </div>
                         </div>
                         <div id="rec-styles-3" class="recommendation" style="display:none;">
@@ -691,13 +676,13 @@
                                 <li>Voicing Ragas</li>
                             </ul>
                             <div class="infinity-pass">
-                                <strong>💎 Sugerencia:</strong> Adquiere el Infinity Pass por USD 150 para tener acceso ilimitado a todas las electivas y profundizar más en el canto
+                                <strong>💎 Sugerencia:</strong> Adquiere el TEB Extension Pass por USD 150 para tener acceso a 8 electivas y profundizar más en el canto
                             </div>
                         </div>
                     </div>
 
                     <button class="profile-btn" onclick="toggleSub(this, 'interpretacion')">
-                        🎭 Quiero cantar y mejorar mi interpretación
+                        Quiero cantar y mejorar mi interpretación
                         <span class="toggle-arrow">▼</span>
                     </button>
                     <div id="interpretacion" class="sub-buttons">
@@ -708,13 +693,13 @@
                                 <li>Acting the song</li>
                             </ul>
                             <div class="infinity-pass">
-                                <strong>💎 Sugerencia:</strong> Adquiere el Infinity Pass por USD 150 para tener acceso ilimitado a todas las electivas y profundizar más en el canto
+                                <strong>💎 Sugerencia:</strong> Adquiere el TEB Extension Pass por USD 150 para tener acceso a 8 electivas y profundizar más en el canto
                             </div>
                         </div>
                     </div>
 
                     <button class="profile-btn" onclick="toggleSub(this, 'coro')">
-                        👥 Quiero experimentar cantar en coro
+                        Quiero experimentar cantar en coro
                         <span class="toggle-arrow">▼</span>
                     </button>
                     <div id="coro" class="sub-buttons">
@@ -725,7 +710,7 @@
                                 <li>Gospel Choir</li>
                             </ul>
                             <div class="infinity-pass">
-                                <strong>💎 Sugerencia:</strong> Adquiere el Infinity Pass por USD 150 para tener acceso ilimitado a todas las electivas y profundizar más en el canto
+                                <strong>💎 Sugerencia:</strong> Adquiere el TEB Extension Pass por USD 150 para tener acceso a 8 electivas y profundizar más en el canto
                             </div>
                         </div>
                     </div>
